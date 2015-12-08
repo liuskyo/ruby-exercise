@@ -1,0 +1,47 @@
+class MyCar
+	attr_accessor:year
+	attr_accessor:color
+	attr_accessor:model
+    attr_accessor:speed
+
+	
+
+
+	def initialize(year,color,model)
+		@year=year
+		@color=color
+		@model=model
+		@speed=0
+	end
+
+	def speed_up
+		@speed=@speed+10
+	end
+
+	def brake
+		if @speed>=10
+			@speed=@speed-10
+		else
+			@speed=0
+		end
+	end
+
+	def shut_off
+		@speed=0
+	end
+end
+
+
+car1=MyCar.new(1988,"blue","Bezn")
+car1.speed_up
+puts car1.speed
+
+car1.speed_up
+puts car1.speed
+
+car1.brake
+puts car1.speed
+
+car1.shut_off
+puts car1.speed
+
